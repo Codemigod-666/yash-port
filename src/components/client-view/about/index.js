@@ -96,7 +96,7 @@ export default function ClientAboutView({data}) {
                             {
                                 headingText.split(' ').map((item, index) => {
                                     return (
-                                        <span className={`${ index === 6 ? "text-green-main" : "text-[#000]"}`}>
+                                        <span key={index} className={`${ index === 6 ? "text-green-main" : "text-[#000]"}`}>
                                             {item}{" "}
                                         </span>
                                     )

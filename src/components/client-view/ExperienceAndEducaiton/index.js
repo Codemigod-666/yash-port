@@ -26,6 +26,7 @@ export default function ClientExperienceAndEducationView({
                 <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
                   {"My Experince".split(" ").map((item, index) => (
                     <span
+                      key={index}
                       className={`${
                         index === 1 ? "text-green-main" : "text-[#000]"
                       }`}>

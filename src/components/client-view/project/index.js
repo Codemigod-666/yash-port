@@ -20,7 +20,7 @@ export default function ClientProjectView({data}) {
                             {
                                 "My Project".split(' ').map((item , index) => {
                                     return (
-                                        <span className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}>
+                                        <span key={index} className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}>
                                             {item}{" "}
                                         </span>
                                     )
