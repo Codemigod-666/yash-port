@@ -123,6 +123,7 @@ export default function ClientAboutView({data}) {
                                 >
                                     {data?.skills?.split(",").map((skill) => (
                                     <motion.div
+                                        key={index}
                                         className="w-full flex justify-center items-center"
                                         variants={skillItemVariant}
                                     >

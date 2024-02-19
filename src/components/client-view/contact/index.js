@@ -90,7 +90,7 @@ export default function ClientContactView() {
                     <div className="flex flex-wrap -m-2">
                         {controls.map((controlItem) =>
                         controlItem.name === "message" ? (
-                            <div className="p-2 w-full">
+                            <div key={index} className="p-2 w-full">
                             <div className="relative">
                                 <label className="text-sm text-[#000]">
                                 {controlItem.label}
@@ -110,7 +110,7 @@ export default function ClientContactView() {
                             </div>
                             </div>
                         ) : (
-                            <div className="p-2 w-full">
+                            <div key={index} className="p-2 w-full">
                             <div className="relative">
                                 <label className="text-sm text-[#000]">
                                 {controlItem.label}
