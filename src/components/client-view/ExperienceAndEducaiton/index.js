@@ -41,7 +41,7 @@ export default function ClientExperienceAndEducationView({
                 <motion.div className="container">
                   <Timeline position="right">
                     {experienceData && experienceData.length
-                      ? experienceData.map((experienceItem) => (
+                      ? experienceData.map((experienceItem, index) => (
                           <TimelineItem key={index}>
                             <TimelineSeparator>
                               <TimelineDot className="bg-green-main" />
@@ -93,7 +93,7 @@ export default function ClientExperienceAndEducationView({
                 <motion.div className="container">
                   <Timeline position="right">
                     {educationData && educationData.length
-                      ? educationData.map((educationItem) => (
+                      ? educationData.map((educationItem, index) => (
                           <TimelineItem key={index}>
                             <TimelineSeparator>
                               <TimelineDot className="bg-green-main" />
