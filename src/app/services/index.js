@@ -19,7 +19,7 @@ export async function addData(currentTab, formData){
 
 export async function getData(currentTab){
     try {
-        const response = await fetch(`/api/${currentTab}/get`, {
+        const response = await fetch(`http://localhost:3000//api/${currentTab}/get`, {
             method: 'GET',
             headers: {
                 'Content-Type' : 'application/json'
