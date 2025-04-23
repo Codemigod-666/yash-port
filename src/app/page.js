@@ -4,13 +4,14 @@ import ClientExperienceAndEducationView from '@/components/client-view/Experienc
 import ClientProjectView from '@/components/client-view/project';
 import ClientContactView from '@/components/client-view/contact';
 
-import Image from 'next/image'
 
-async function extractAllDatas(currentSection){
-  const res = await fetch(`http://localhost:3000/api/${currentSection}/get`, {
+async function extractAllDatas(currentSection) {
+  const res = await fetch(`https://yash-port-zeta.vercel.app/api/${currentSection}/get`, {
     method: 'GET',
     cache: 'no-store',
   });
+
+  console.log("res", res)
 
   const data = await res.json();
   return data && data.data;
@@ -23,17 +24,17 @@ export default async function Home() {
   const experienceSectionData = await extractAllDatas('experience');
   const educationSectionData = await extractAllDatas('education');
   const projectSectionData = await extractAllDatas('project');
-  
+
   return (
     <>
-    <ClientHomeView data={homeSectionData} />
-    <ClientAboutView data={
-      aboutSectionData && aboutSectionData.length ?  aboutSectionData[0] : []
-    } />
-    <ClientExperienceAndEducationView educationData={educationSectionData} experienceData={experienceSectionData}/>
-    <ClientProjectView data={projectSectionData} />
-    <ClientContactView />
-      
+      <ClientHomeView data={homeSectionData} />
+      <ClientAboutView data={
+        aboutSectionData && aboutSectionData.length ? aboutSectionData[0] : []
+      } />
+      <ClientExperienceAndEducationView educationData={educationSectionData} experienceData={experienceSectionData} />
+      <ClientProjectView data={projectSectionData} />
+      <ClientContactView />
+
     </>
   )
 }

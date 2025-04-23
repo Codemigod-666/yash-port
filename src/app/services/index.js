@@ -1,10 +1,10 @@
-export async function addData(currentTab, formData){
+export async function addData(currentTab, formData) {
     try {
-        const response = await fetch(`http://localhost:3000/api/${currentTab}/add`, {
+        const response = await fetch(`https://yash-port-zeta.vercel.app/api/${currentTab}/add`, {
             method: 'POST',
             headers: {
-                'Content-Type' : 'application/json'
-            }, 
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(formData)
         });
 
@@ -17,12 +17,12 @@ export async function addData(currentTab, formData){
     }
 }
 
-export async function getData(currentTab){
+export async function getData(currentTab) {
     try {
-        const response = await fetch(`http://localhost:3000/api/${currentTab}/get`, {
+        const response = await fetch(`https://yash-port-zeta.vercel.app/api/${currentTab}/get`, {
             method: 'GET',
             headers: {
-                'Content-Type' : 'application/json'
+                'Content-Type': 'application/json'
             },
         })
         const result = await response.json();
@@ -32,13 +32,13 @@ export async function getData(currentTab){
     }
 }
 
-export async function updateData(currentTab, formData){
+export async function updateData(currentTab, formData) {
     try {
-        const response = await fetch(`http://localhost:3000/api/${currentTab}/update`, {
+        const response = await fetch(`https://yash-port-zeta.vercel.app/api/${currentTab}/update`, {
             method: 'PUT',
             headers: {
-                'Content-Type' : 'application/json'
-            }, 
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(formData)
         });
         const result = await response.json();
@@ -49,13 +49,13 @@ export async function updateData(currentTab, formData){
 }
 
 
-export async function login(formData){
+export async function login(formData) {
     try {
-        const response = await fetch(`http://localhost:3000/api/login`, {
+        const response = await fetch(`https://yash-port-zeta.vercel.app/api/login`, {
             method: 'POST',
             headers: {
-                'Content-Type' : 'application/json'
-            }, 
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(formData)
         });
         const result = await response.json();

@@ -9,7 +9,7 @@ import AdminProjectView from "@/components/admin-view/project";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { addData, getData, login, updateData } from "../services";
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 import Login from "@/components/admin-view/login";
 import { useRouter } from "next/navigation";
 
@@ -73,7 +73,7 @@ export default function AdminView() {
   const [update, setUpdate] = useState(false);
   const [authUser, setAuthUser] = useState(false);
 
-  
+
   // get the data on page load
   useEffect(() => {
     extractAllDatas();
@@ -248,12 +248,12 @@ export default function AdminView() {
         ))}
       </nav>
       <div className="flex flex-row justify-end items-center px-2">
-        <button 
-        onClick={() => {
-          handleLogout();
-          router.push('/');
-        }}
-        className="bg-orange-500 text-[#fff] font-bold p-3 rounded-lg">
+        <button
+          onClick={() => {
+            handleLogout();
+            router.push('/');
+          }}
+          className="bg-orange-500 text-[#fff] font-bold p-3 rounded-lg">
           Logout
         </button>
       </div>
